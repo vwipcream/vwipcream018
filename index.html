@@ -1,0 +1,107 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>♡ Wipcream ♡༄</title>
+<!-- Link Leaflet css and javascript -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+</head>
+<body>
+
+  <body  bgcolor ="fbe8d1">
+<!-- divide map bounding box -->
+<center>
+<br>
+<FONT FACE="DB Manit X" size = "10">
+<strong><font color="516323">𝗠𝗮𝗽 𝟱 𝗣𝗹𝗮𝗰𝗲𝘀 𝘁𝗼 𝘃𝗶𝘀𝗶𝘁 𝗶𝗻 𝗦𝗲𝗼𝘂𝗹, 𝗦𝗼𝘂𝘁𝗵 𝗞𝗼𝗿𝗲𝗮
+<FONT FACE="DB Manit X" size = "5">
+  <br>🤍 지도 5 한국 서울에서 방문할 장소 🤍
+<FONT FACE="DB Manit X" size = "3">
+  <br>ﾟ ﾟ･*༚✧˳⁎⁺ 𝗣𝗥𝗘𝗘𝗬𝗔𝗞𝗢𝗥𝗡𝟬𝟭𝟴 ⁎⁺˳✧༚*･゜ </a></FONT></strong>
+<br>
+</FONT><br>
+<div id = "map" style = "width: 1500px ; height: 600px" </div>
+<!-- set center and Link map-->
+<script>
+var map = L.map("map").setView([37.80369663711411, 126.93700113505466],16);
+
+mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+attribution: 'Map data &copy; ' + mapLink,
+maxZoom: 19,
+}).addTo(map);
+
+
+var greenIcon = L.icon({
+iconUrl: "south-korea.png",
+shadowUrl: "",
+
+iconSize: [80, 80], // size of the icon
+shadowSize: [50, 64], // size of the shadow
+iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+shadowAnchor: [4, 62], // the same for the shadow
+popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+
+var marker = L.marker([37.579574839882255, 126.99101711588426],
+{
+icon: greenIcon,
+draggable: true,
+title: "Changdeokgung",
+opacity: 1.5
+}).addTo(map)
+.bindPopup("<b> พระราชวังชางด็อกกุง </b>")
+.openPopup();
+
+
+var marker = L.marker([37.55134800393683, 126.98814076702254],
+{
+icon: greenIcon,
+draggable: true,
+title: "N Seoul Tower",
+opacity: 1.5
+}).addTo(map)
+.bindPopup("<b> เอ็นโซลทาวเวอร์ </b>")
+.openPopup();
+
+
+var marker = L.marker([37.579167334492595, 126.98643535538476],
+{
+icon: greenIcon,
+draggable: true,
+title: "Bukchon Hanok Village",
+opacity: 1.5
+}).addTo(map)
+.bindPopup("<b> หมู่บ้านบุกชอนฮันอก </b>")
+.openPopup();
+
+
+var marker = L.marker([37.526336429930815, 126.98033148144684],
+{
+icon: greenIcon,
+draggable: true,
+title: "National Museum of Korea",
+opacity: 1.5
+}).addTo(map)
+.bindPopup("<b> พิพิธภัณฑ์แห่งชาติเกาหลี </b>")
+.openPopup();
+
+
+var marker = L.marker([37.56187363739576, 126.9858249009113],
+{
+icon: greenIcon,
+draggable: true,
+title: "Myeongdong",
+opacity: 1.5
+}).addTo(map)
+.bindPopup("<b> ตลาดมย็อง </b>")
+.openPopup();
+</script>
+</center>
+
+</body>
+</html>
